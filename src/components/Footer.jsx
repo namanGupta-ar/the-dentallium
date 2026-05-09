@@ -1,72 +1,219 @@
-import { Phone, MessageCircle, MapPin, Mail } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Mail, Calendar, CheckCircle, Star, Clock, ChevronRight, Shield } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid lg:grid-cols-[1fr_auto_auto] gap-8 items-center">
-          {/* Left — CTA text */}
-          <div className="text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-2 leading-tight">
-              Ready to Transform
-              <br />
-              Your Smile?
-            </h2>
-            <p className="text-slate-400 text-sm max-w-sm">
-              Book your appointment today and take the first step towards a healthier, more beautiful smile.
-            </p>
-            <a
-              href="mailto:thedentalliumclinic@gmail.com"
-              className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white text-sm mt-3 transition-colors"
-            >
-              <Mail size={14} />
-              thedentalliumclinic@gmail.com
-            </a>
-          </div>
-
-          {/* Middle — Contact cards row */}
-          <div className="flex flex-wrap sm:flex-nowrap gap-3">
-            <a
-              href="tel:+917982542536"
-              className="bg-blue-700/80 rounded-xl px-5 py-4 text-center hover:bg-blue-700 transition-colors min-w-[130px]"
-            >
-              <Phone size={18} className="mx-auto mb-1.5 text-white" />
-              <p className="font-semibold text-sm mb-0.5">Call Us</p>
-              <p className="text-blue-200 text-[11px]">7982542536</p>
-            </a>
-            <a
-              href="https://wa.me/917982542536"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-700/80 rounded-xl px-5 py-4 text-center hover:bg-green-700 transition-colors min-w-[130px]"
-            >
-              <MessageCircle size={18} className="mx-auto mb-1.5 text-white" />
-              <p className="font-semibold text-sm mb-0.5">WhatsApp</p>
-              <p className="text-green-200 text-[11px]">7206169798</p>
-            </a>
-            <div className="bg-slate-700/80 rounded-xl px-5 py-4 text-center min-w-[130px]">
-              <MapPin size={18} className="mx-auto mb-1.5 text-red-400" />
-              <p className="font-semibold text-sm mb-0.5">Visit Us</p>
-              <p className="text-slate-300 text-[11px]">F-16, F Block Market,<br />Ashok Vihar Phase-1,<br />Delhi-110052</p>
-            </div>
-          </div>
-
-          {/* Right — Clinic image + Logo */}
-          <div className="hidden lg:flex flex-col items-center gap-3">
-            <div className="w-40 h-28 rounded-xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300&h=200&fit=crop"
-                alt="The Dentallium clinic interior"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex items-center gap-1.5">
-              <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white text-[10px]">🦷</span>
+    <footer id="contact">
+      {/* CTA Banner */}
+      <div className="bg-gradient-to-br from-[#0a1628] via-[#0f1f3d] to-[#162854] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-3">
+                Ready for a <span className="text-blue-400">Confident Smile?</span>
+              </h2>
+              <p className="text-slate-400 text-sm mb-6 max-w-md">
+                Book your consultation today with Delhi's trusted dental experts.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 bg-slate-800 border border-slate-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-700 transition-colors text-sm"
+                >
+                  <Calendar size={15} /> Book Appointment
+                </a>
+                <a
+                  href="https://wa.me/917982542536"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors text-sm"
+                >
+                  <MessageCircle size={15} /> WhatsApp Us
+                </a>
               </div>
-              <span className="font-bold text-sm">
-                The <span className="text-primary-light">Dentallium</span>
-              </span>
+              <div className="flex flex-wrap items-center gap-5 text-slate-400 text-xs">
+                <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-blue-400" /> Advanced Technology</span>
+                <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-blue-400" /> Experienced Doctors</span>
+                <span className="flex items-center gap-1.5"><CheckCircle size={13} className="text-blue-400" /> Painless Treatment</span>
+              </div>
+            </div>
+
+            {/* Right — Image + Stats */}
+            <div className="hidden lg:flex items-end justify-end gap-4">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=350&h=400&fit=crop&crop=face"
+                  alt="Happy patient smiling"
+                  className="w-64 h-72 object-cover rounded-2xl"
+                />
+              </div>
+              <div className="flex flex-col gap-3">
+                <div className="bg-white/10 backdrop-blur rounded-xl px-5 py-4 text-center">
+                  <p className="text-2xl font-bold text-white">5000+</p>
+                  <p className="text-slate-400 text-xs">Happy Patients</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-xl px-5 py-4 text-center">
+                  <p className="text-2xl font-bold text-white">4.9</p>
+                  <div className="flex justify-center gap-0.5 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} size={12} className="text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-slate-400 text-xs mt-1">Google Rating</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer */}
+      <div className="bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Column 1 — Brand */}
+            <div>
+              <div className="mb-4">
+                <img src="/logo.png" alt="The Dentallium" className="h-20 w-auto" />
+              </div>
+              <p className="text-slate-400 text-sm leading-relaxed mb-5">
+                We combine advanced technology with compassionate care to deliver exceptional dental experiences and lifelong smiles.
+              </p>
+              <div className="flex items-center gap-4 mb-5">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
+                    <span className="text-white text-[10px] font-bold">G</span>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold">4.9 Rating</p>
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={10} className="text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 bg-slate-700 rounded flex items-center justify-center">
+                    <span className="text-white text-[10px]">😊</span>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold">5000+</p>
+                    <p className="text-[10px] text-slate-400">Happy Patients</p>
+                  </div>
+                </div>
+              </div>
+              {/* <p className="text-slate-400 text-xs font-semibold mb-2">Follow Us</p>
+              <div className="flex items-center gap-2">
+                <a href="#" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-300"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-300"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-300"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                </a>
+                <a href="https://wa.me/917982542536" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+                  <MessageCircle size={14} className="text-slate-300" />
+                </a>
+              </div> */}
+            </div>
+
+            {/* Column 2 — Quick Links */}
+            <div>
+              <h3 className="font-bold text-sm mb-4">Quick Links</h3>
+              <ul className="space-y-2.5">
+                {['Home', 'About Us', 'Our Services', 'Smile Gallery', 'Patient Reviews', 'Contact Us'].map((link) => (
+                  <li key={link}>
+                    <a href={`#${link.toLowerCase().replace(/ /g, '-')}`} className="flex items-center gap-1.5 text-slate-400 hover:text-white text-sm transition-colors">
+                      <ChevronRight size={12} /> {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 3 — Our Treatments */}
+            <div>
+              <h3 className="font-bold text-sm mb-4">Our Treatments</h3>
+              <ul className="space-y-2.5">
+                {['Dental Implants', 'Smile Makeover', 'Teeth Whitening', 'Root Canal Treatment', 'Braces & Aligners', 'Kids Dentistry', 'Cosmetic Dentistry'].map((t) => (
+                  <li key={t}>
+                    <a href="#services" className="flex items-center gap-1.5 text-slate-400 hover:text-white text-sm transition-colors">
+                      <span className="text-blue-400">🦷</span> {t}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 4 — Contact Us */}
+            <div>
+              <h3 className="font-bold text-sm mb-4">Contact Us</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-slate-400 text-sm">
+                  <MapPin size={14} className="text-blue-400 shrink-0 mt-0.5" />
+                  <span>F-16, F Block Market,<br />Ashok Vihar Phase-1,<br />Delhi-110052</span>
+                </li>
+                <li>
+                  <a href="tel:+917982542536" className="flex items-center gap-2 text-slate-400 hover:text-white text-sm transition-colors">
+                    <Phone size={14} className="text-blue-400 shrink-0" />
+                    +91 79825 42536
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+917206169798" className="flex items-center gap-2 text-slate-400 hover:text-white text-sm transition-colors">
+                    <Phone size={14} className="text-blue-400 shrink-0" />
+                    +91 72061 69798
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:thedentalliumclinic@gmail.com" className="flex items-center gap-2 text-slate-400 hover:text-white text-sm transition-colors">
+                    <Mail size={14} className="text-blue-400 shrink-0" />
+                    thedentalliumclinic@gmail.com
+                  </a>
+                </li>
+                <li className="flex items-center gap-2 text-slate-400 text-sm">
+                  <Clock size={14} className="text-blue-400 shrink-0" />
+                  Mon - Sun : 10:00 AM - 8:00 PM
+                </li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <a
+                  href="https://maps.google.com/?q=F-16+F+Block+Market+Ashok+Vihar+Phase-1+Delhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 border border-slate-600 text-white text-xs font-medium px-3 py-2 rounded-lg hover:bg-slate-800 transition-colors"
+                >
+                  <MapPin size={12} /> View on Map
+                </a>
+                <a
+                  href="https://wa.me/917982542536"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-green-600 text-white text-xs font-medium px-3 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                >
+                  <MessageCircle size={12} /> Chat on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <div className="flex items-center gap-1.5">
+              <Shield size={12} /> 100% Secure & Hygienic Environment
+            </div>
+            <p>© 2025 The Dentallium Clinic. All rights reserved.</p>
+            <div className="flex items-center gap-3">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <span>|</span>
+              <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+              <span>|</span>
+              <a href="#" className="hover:text-white transition-colors">Sitemap</a>
             </div>
           </div>
         </div>

@@ -58,10 +58,10 @@ export default function Hero() {
             {/* Social proof */}
             <div className="flex items-center gap-3 mt-8">
               <div className="flex -space-x-2.5">
-                {['https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
-                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
-                  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
-                  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
+                {['https://images.unsplash.com/photo-1618835962148-cf177563c6c0?w=80&h=80&fit=crop&crop=face',
+                  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face',
+                  'https://images.unsplash.com/photo-1611432579699-484f7990b127?w=80&h=80&fit=crop&crop=face',
+                  'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=80&h=80&fit=crop&crop=face',
                 ].map((src, i) => (
                   <img
                     key={i}

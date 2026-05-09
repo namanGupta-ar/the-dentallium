@@ -6,21 +6,21 @@ const testimonials = [
     role: 'Assistant Professor, Shivaji College, University of Delhi',
     rating: 5,
     text: '"The team is amazing! Dr. Prateek and Dr. Garima are both exceptional, explaining every step clearly and ensuring my comfort throughout the procedure. The hygienists and assistants were thorough and attentive, providing excellent care. I highly recommend The Dentallium!"',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face',
   },
   {
     name: 'Priya M.',
     role: 'Patient',
     rating: 5,
     text: '"I was always afraid of dentists, but The Dentallium made me feel so comfortable. The modern facility and friendly reception put me at ease. My smile has never looked better after the treatment."',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
+    avatar: 'https://images.unsplash.com/photo-1611432579699-484f7990b127?w=80&h=80&fit=crop&crop=face',
   },
   {
     name: 'Rahul S.',
     role: 'Patient',
     rating: 5,
     text: '"Got my orthodontic treatment done here with clear aligners. The procedure was smooth and painless. Dr. Prateek explained everything clearly. Highly recommend The Dentallium for everyone!"',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
+    avatar: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?w=80&h=80&fit=crop&crop=face',
   },
 ];
 

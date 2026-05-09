@@ -36,7 +36,7 @@ export default function Doctors() {
               key={doc.name}
               className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
-              <div className="h-56 overflow-hidden">
+              <div className="aspect-4/5 overflow-hidden bg-gray-100">
                 <img
                   src={doc.image}
                   alt={doc.name}

@@ -10,13 +10,8 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-bold">🦷</span>
-          </div>
-          <span className="text-lg font-bold text-dark">
-            The <span className="text-primary">Dentallium</span>
-          </span>
+        <a href="#" className="flex items-center">
+          <img src="/logo.png" alt="The Dentallium" className="h-20 w-auto rounded-lg" />
         </a>
 
         {/* Desktop Links */}
