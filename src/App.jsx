@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ProblemToPerfect from './components/ProblemToPerfect'
 import Treatments from './components/Treatments'
+import Doctors from './components/Doctors'
 import Technology from './components/Technology'
 import Results from './components/Results'
 import Testimonials from './components/Testimonials'
@@ -12,6 +13,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <Doctors />
       <ProblemToPerfect />
       <Treatments />
       <Technology />

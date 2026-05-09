@@ -2,50 +2,59 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Meera S.',
+    name: 'Dr. Pawan Kumar',
+    role: 'Assistant Professor, Shivaji College, University of Delhi',
     rating: 5,
-    text: '"The team is amazing! I was always afraid of dentists, but they made me feel so comfortable. My smile has never looked better."',
-    avatar: 'M',
-    color: 'from-pink-400 to-rose-500',
+    text: '"The team is amazing! Dr. Prateek and Dr. Garima are both exceptional, explaining every step clearly and ensuring my comfort throughout the procedure. The hygienists and assistants were thorough and attentive, providing excellent care. I highly recommend The Dentallium!"',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
   },
   {
-    name: 'Rohit P.',
+    name: 'Priya M.',
+    role: 'Patient',
     rating: 5,
-    text: '"Got my implant done here. The procedure was smooth and painless. Highly recommend DentaCare for everyone!"',
-    avatar: 'R',
-    color: 'from-blue-400 to-indigo-500',
+    text: '"I was always afraid of dentists, but The Dentallium made me feel so comfortable. The modern facility and friendly reception put me at ease. My smile has never looked better after the treatment."',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face',
   },
   {
-    name: 'Anjali K.',
+    name: 'Rahul S.',
+    role: 'Patient',
     rating: 5,
-    text: '"Teeth whitening results are fantastic! I got my confidence back. Thank you DentaCare doctor and team."',
-    avatar: 'A',
-    color: 'from-emerald-400 to-teal-500',
+    text: '"Got my orthodontic treatment done here with clear aligners. The procedure was smooth and painless. Dr. Prateek explained everything clearly. Highly recommend The Dentallium for everyone!"',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
   },
 ];
 
 export default function Testimonials() {
   return (
     <section id="testimonials" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-10">What Our Patients Say</h2>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-10 text-center">What Our Patients Say</h2>
 
-        <div className="relative">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="relative px-8 lg:px-12">
+          {/* Nav arrow — left edge */}
+          <button
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full hidden sm:flex items-center justify-center shadow-sm hover:bg-gray-50 transition z-10"
+            aria-label="Previous"
+          >
+            <ChevronLeft size={16} className="text-gray-600" />
+          </button>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {testimonials.map((t) => (
               <div
                 key={t.name}
                 className="bg-white rounded-2xl p-6 text-left shadow-sm border border-gray-100"
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <div
-                    className={`w-10 h-10 rounded-full bg-linear-to-br ${t.color} flex items-center justify-center text-white font-bold text-sm`}
-                  >
-                    {t.avatar}
-                  </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <div>
                     <p className="font-semibold text-dark text-sm">{t.name}</p>
-                    <p className="text-yellow-400 text-xs">
+                    <p className="text-gray-400 text-[11px]">{t.role}</p>
+                    <p className="text-yellow-400 text-xs tracking-wide">
                       {'★'.repeat(t.rating)}
                     </p>
                   </div>
@@ -55,18 +64,12 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Decorative nav arrows */}
+          {/* Nav arrow — right edge */}
           <button
-            className="absolute -left-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full hidden lg:flex items-center justify-center shadow-sm hover:bg-gray-50 transition"
-            aria-label="Previous"
-          >
-            <ChevronLeft size={16} />
-          </button>
-          <button
-            className="absolute -right-4 top-1/2 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full hidden lg:flex items-center justify-center shadow-sm hover:bg-gray-50 transition"
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-9 h-9 bg-white border border-gray-200 rounded-full hidden sm:flex items-center justify-center shadow-sm hover:bg-gray-50 transition z-10"
             aria-label="Next"
           >
-            <ChevronRight size={16} />
+            <ChevronRight size={16} className="text-gray-600" />
           </button>
         </div>
       </div>

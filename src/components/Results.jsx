@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
+  '/clinic-image.jpg',
   'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=900&h=400&fit=crop',
   'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&h=400&fit=crop',
   'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=900&h=400&fit=crop',
@@ -19,8 +20,8 @@ export default function Results() {
         <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-2">Real Results. Real Smiles.</h2>
         <p className="text-gray-500 mb-8">See the amazing transformations</p>
 
-        <div className="relative max-w-4xl mx-auto">
-          <div className="rounded-2xl overflow-hidden aspect-16/7">
+        <div className="relative max-w-5xl mx-auto">
+          <div className="rounded-2xl overflow-hidden aspect-video sm:aspect-[2.2/1]">
             <img
               src={slides[current]}
               alt={`Result ${current + 1}`}
@@ -28,22 +29,24 @@ export default function Results() {
             />
           </div>
 
-          {/* Navigation arrows */}
-          <button
-            onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow hover:bg-white transition-colors"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow hover:bg-white transition-colors"
-          >
-            <ChevronRight size={20} />
-          </button>
+          {/* Center nav — dark circle with prev/next arrows */}
+          <div className="absolute left-1/2 bottom-6 -translate-x-1/2 flex items-center gap-0">
+            <button
+              onClick={prev}
+              className="w-10 h-10 bg-slate-800/80 backdrop-blur text-white rounded-l-full flex items-center justify-center hover:bg-slate-800 transition-colors"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              onClick={next}
+              className="w-10 h-10 bg-slate-800/80 backdrop-blur text-white rounded-r-full flex items-center justify-center hover:bg-slate-800 transition-colors"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </div>
 
           {/* Dots */}
-          <div className="flex justify-center gap-2 mt-4">
+          <div className="flex justify-center gap-2 mt-5">
             {slides.map((_, i) => (
               <button
                 key={i}

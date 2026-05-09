@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
-const navLinks = ['Home', 'About', 'Treatments', 'Technology', 'Results', 'Testimonials', 'Contact'];
+const navLinks = ['Home', 'About', 'Services', 'Technology', 'Results', 'Testimonials', 'Contact'];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,8 +14,8 @@ export default function Navbar() {
           <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
             <span className="text-white text-sm font-bold">🦷</span>
           </div>
-          <span className="text-xl font-bold text-dark">
-            <span className="text-primary">Denta</span>Care
+          <span className="text-lg font-bold text-dark">
+            The <span className="text-primary">Dentallium</span>
           </span>
         </a>
 
@@ -34,12 +34,18 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-primary-dark transition-colors"
-        >
-          Book Appointment
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          <a href="tel:7982542536" className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-primary transition-colors">
+            <Phone size={14} />
+            <span className="font-medium">7982542536</span>
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-primary-dark transition-colors"
+          >
+            Book Appointment
+          </a>
+        </div>
 
         {/* Mobile toggle */}
         <button
