@@ -14,7 +14,7 @@ export default function Hero() {
               Transform Your{' '}
               <span className="relative inline-block text-primary">
                 Smile
-                <svg
+                {/* <svg
                   className="absolute -bottom-4 left-[-5%] w-[130%]"
                   viewBox="0 0 140 28"
                   fill="none"
@@ -36,7 +36,7 @@ export default function Hero() {
                     fill="none"
                     opacity="0.4"
                   />
-                </svg>
+                </svg> */}
               </span>
               <br />
               Transform Your Life

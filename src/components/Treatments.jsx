@@ -1,117 +1,111 @@
+import { ArrowRight, Search, Sparkles, Crown, Wrench, Baby, Plug, Scissors, Sun, ShieldCheck } from 'lucide-react';
+
 const treatments = [
   {
-    icon: '😁',
     title: 'Orthodontics',
-    desc: 'Clear Aligners & Invisible Braces',
-    images: [
-      'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1581585090934-e3816e5a0e68?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-blue-600',
+    desc: 'Straighten your teeth with clear aligners & advanced braces.',
+    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&h=300&fit=crop',
+    icon: Search,
   },
   {
-    icon: '✨',
     title: 'Cosmetic Dentistry',
-    desc: 'Laminates & Veneers',
-    images: [
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-purple-600',
+    desc: 'Enhance your smile with veneers, bonding & smile makeovers.',
+    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&h=300&fit=crop',
+    icon: Sparkles,
   },
   {
-    icon: '🦷',
     title: 'Prosthodontics',
-    desc: 'Dentures, Crowns & Bridges',
-    images: [
-      'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-slate-700',
+    desc: 'Restore function and beauty with crowns, bridges & dentures.',
+    image: 'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=500&h=300&fit=crop',
+    icon: Crown,
   },
   {
-    icon: '🔧',
     title: 'Endodontics',
-    desc: 'Root Canal & Restorations',
-    images: [
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-red-600',
+    desc: 'Relieve pain and save your natural teeth with root canal treatments.',
+    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=500&h=300&fit=crop',
+    icon: Wrench,
   },
   {
-    icon: '�',
-    title: 'Paediatric Dentistry',
-    desc: 'Gentle care for children',
-    images: [
-      'https://images.unsplash.com/photo-1581585090934-e3816e5a0e68?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-pink-500',
+    title: 'Pediatric Dentistry',
+    desc: 'Gentle, caring dental treatment for your little ones.',
+    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=500&h=300&fit=crop',
+    icon: Baby,
   },
   {
-    icon: '🦿',
     title: 'Dental Implants',
-    desc: 'Permanent solution for missing teeth',
-    images: [
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-teal-600',
+    desc: 'Permanent, natural-looking solution for missing teeth.',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&h=300&fit=crop',
+    icon: Plug,
   },
   {
-    icon: '⚕️',
     title: 'Surgical Extractions',
-    desc: 'Extractions & Impactions',
-    images: [
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-orange-600',
+    desc: 'Safe and comfortable removal of damaged or impacted teeth.',
+    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=500&h=300&fit=crop&crop=top',
+    icon: Scissors,
   },
   {
-    icon: '💎',
     title: 'Teeth Whitening',
-    desc: 'Whitening & Professional Cleaning',
-    images: [
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=150&h=100&fit=crop',
-    ],
-    iconBg: 'bg-cyan-600',
+    desc: 'Professional whitening for a brighter, whiter, more confident smile.',
+    image: 'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=500&h=300&fit=crop&crop=top',
+    icon: Sun,
   },
 ];
+
 
 export default function Treatments() {
   return (
     <section id="services" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-2">Our Services</h2>
-        <p className="text-gray-500 mb-10">Comprehensive care for your perfect smile</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Our Services</p>
+          {/* Decorative line with tooth icon */}
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="h-px w-16 bg-primary/30" />
+            <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+              <ShieldCheck size={16} className="text-primary" />
+            </div>
+            <div className="h-px w-16 bg-primary/30" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-dark mb-3">
+            Complete Care for Your Perfect Smile
+          </h2>
+          <p className="text-gray-500 text-sm max-w-xl mx-auto">
+            Advanced technology, expert care, and personalized treatments<br className="hidden sm:block" />
+            for a healthier, brighter smile.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4">
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {treatments.map((t) => (
             <div
               key={t.title}
-              className="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-white text-center"
+              className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-100/50 transition-all duration-300"
             >
-              {/* Two thumbnail images side by side */}
-              <div className="flex">
-                {t.images.map((img, idx) => (
-                  <div key={idx} className="w-1/2 h-20 overflow-hidden">
-                    <img
-                      src={img}
-                      alt={`${t.title} ${idx + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="px-3 py-4">
-                <div className={`w-9 h-9 ${t.iconBg} rounded-full flex items-center justify-center text-sm mx-auto mb-2`}>
-                  <span className="text-white">{t.icon}</span>
+              {/* Image */}
+              <div className="relative h-40 overflow-hidden">
+                <img
+                  src={t.image}
+                  alt={t.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Icon badge */}
+                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center border border-slate-100">
+                  <t.icon size={20} className="text-primary" />
                 </div>
-                <h3 className="font-bold text-dark text-xs mb-1 leading-tight">{t.title}</h3>
-                <p className="text-gray-400 text-[11px] leading-relaxed">{t.desc}</p>
+              </div>
+
+              {/* Content */}
+              <div className="px-5 pt-8 pb-5 text-center">
+                <h3 className="font-bold text-dark text-[15px] mb-2">{t.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed mb-4">{t.desc}</p>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-1 text-primary text-xs font-semibold hover:gap-2 transition-all"
+                >
+                  Learn More <ArrowRight size={13} />
+                </a>
               </div>
             </div>
           ))}

@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin, Mail, Calendar, CheckCircle, Star, Clock, ChevronRight, Shield } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Mail, Calendar, CheckCircle, Star, Clock, ChevronRight, Shield, UsersRound } from 'lucide-react';
 
 function Sparkle({ className, size = 8 }) {
   return (
@@ -38,6 +38,7 @@ export default function Footer() {
         <Sparkle className="absolute bottom-24 left-[10%] opacity-30 animate-pulse" size={5} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14 relative z-10">
+          
           <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-center">
             {/* Left content */}
             <div className="max-w-lg">
@@ -72,26 +73,26 @@ export default function Footer() {
             </div>
 
             {/* Right — Woman image + Stats card */}
-            <div className="hidden lg:flex items-end justify-end relative">
+            <div className="hidden lg:flex items-end justify-end absolute right-[10%] bottom-0">
               {/* Woman image */}
               <div className="relative">
                 <img
                   src="/girl-avatar.png"
                   alt="Happy patient smiling"
-                  className="w-72 h-80 object-cover object-top rounded-2xl"
+                  className="w-full h-80 object-cover object-top"
                 />
                 {/* Subtle glow behind image */}
-                <div className="absolute -inset-4 bg-blue-500/10 rounded-3xl blur-2xl -z-10" />
+                {/* <div className="absolute -inset-4 bg-blue-500/10 rounded-3xl blur-2xl -z-10" /> */}
               </div>
 
               {/* Floating stats card */}
-              <div className="absolute -right-2 top-4 bg-[#0d2259]/90 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-5 shadow-2xl shadow-blue-900/40 min-w-[160px]">
+              <div className="absolute -right-20 top-4 bg-[#0d2259]/90 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-5 shadow-2xl shadow-blue-900/40 min-w-[160px]">
                 <div className="flex items-center gap-2.5 mb-4">
-                  <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center">
-                    <span className="text-white text-sm">🦷</span>
+                  <div className="w-9 h-9 border border-white rounded-xl flex items-center justify-center">
+                    <UsersRound size={20} className="text-white" />
                   </div>
                   <div>
-                    <p className="text-xl font-bold text-white leading-tight">5000+</p>
+                    <p className="text-xl font-bold text-white leading-tight">2000+</p>
                     <p className="text-slate-400 text-[11px]">Happy Patients</p>
                   </div>
                 </div>
@@ -141,7 +142,7 @@ export default function Footer() {
                     <span className="text-white text-[10px]">😊</span>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold">5000+</p>
+                    <p className="text-xs font-semibold">2000+</p>
                     <p className="text-[10px] text-slate-400">Happy Patients</p>
                   </div>
                 </div>
