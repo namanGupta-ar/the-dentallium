@@ -12,15 +12,30 @@ export default function Hero() {
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-dark leading-[1.15]">
               Transform Your{' '}
-              <span className="relative inline-block">
+              <span className="relative inline-block text-primary">
                 Smile
                 <svg
-                  className="absolute -inset-x-2 -inset-y-1 w-[calc(100%+16px)] h-[calc(100%+8px)]"
-                  viewBox="0 0 120 50"
+                  className="absolute -bottom-4 left-[-5%] w-[130%]"
+                  viewBox="0 0 140 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
                 >
-                  <ellipse cx="60" cy="25" rx="56" ry="22" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="4 3" />
+                  <path
+                    d="M4 4C4 4 20 24 70 24C120 24 136 4 136 4"
+                    stroke="#2563eb"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                  <path
+                    d="M10 7C10 7 28 22 70 22C112 22 130 7 130 7"
+                    stroke="#2563eb"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    fill="none"
+                    opacity="0.4"
+                  />
                 </svg>
               </span>
               <br />

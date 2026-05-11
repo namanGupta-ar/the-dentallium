@@ -116,7 +116,7 @@ function CompareSlider({ before, after }) {
 }
 
 export default function Results() {
-  const [current, setCurrent] = useState(0);
+  const [current] = useState(0);
 
   return (
     <section id="results" className="py-16 bg-white">
@@ -131,7 +131,7 @@ export default function Results() {
           />
 
           {/* Dots */}
-          <div className="flex justify-center gap-2 mt-5">
+          {/* <div className="flex justify-center gap-2 mt-5">
             {comparisons.map((_, i) => (
               <button
                 key={i}
@@ -141,7 +141,7 @@ export default function Results() {
                 }`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

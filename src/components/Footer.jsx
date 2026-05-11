@@ -1,24 +1,57 @@
 import { Phone, MessageCircle, MapPin, Mail, Calendar, CheckCircle, Star, Clock, ChevronRight, Shield } from 'lucide-react';
 
+function Sparkle({ className, size = 8 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="white" className={className}>
+      <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer id="contact">
       {/* CTA Banner */}
-      <div className="bg-gradient-to-br from-[#0a1628] via-[#0f1f3d] to-[#162854] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            {/* Left */}
-            <div>
+      <div className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #020a1a 0%, #0a1e47 30%, #0d2b6b 50%, #0a1e47 70%, #020a1a 100%)' }}>
+        {/* Radial glow effects */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-blue-500/15 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-400/10 rounded-full blur-[80px]" />
+
+        {/* Dot grid pattern — left */}
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-20 hidden lg:block">
+          <div className="grid grid-cols-5 gap-2">
+            {[...Array(25)].map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 bg-blue-400 rounded-full" />
+            ))}
+          </div>
+        </div>
+
+        {/* Sparkle decorations */}
+        <Sparkle className="absolute top-8 left-[15%] opacity-60 animate-pulse" size={6} />
+        <Sparkle className="absolute top-12 right-[40%] opacity-80 animate-pulse" size={10} />
+        <Sparkle className="absolute top-6 right-[25%] opacity-50 animate-pulse" size={5} />
+        <Sparkle className="absolute bottom-16 left-[30%] opacity-40 animate-pulse" size={7} />
+        <Sparkle className="absolute top-1/2 left-[45%] opacity-70 animate-pulse" size={8} />
+        <Sparkle className="absolute bottom-8 right-[20%] opacity-50 animate-pulse" size={6} />
+        <Sparkle className="absolute top-20 left-[55%] opacity-60 animate-pulse" size={4} />
+        <Sparkle className="absolute bottom-24 left-[10%] opacity-30 animate-pulse" size={5} />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14 relative z-10">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-center">
+            {/* Left content */}
+            <div className="max-w-lg">
               <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-3">
                 Ready for a <span className="text-blue-400">Confident Smile?</span>
               </h2>
-              <p className="text-slate-400 text-sm mb-6 max-w-md">
-                Book your consultation today with Delhi's trusted dental experts.
+              <p className="text-slate-300/80 text-sm mb-6">
+                Book your consultation today with Delhi's<br className="hidden sm:block" />
+                trusted dental experts.
               </p>
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-3 mb-7">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 bg-slate-800 border border-slate-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-700 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-[#0f2557] border border-blue-500/30 text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#152d6b] transition-colors text-sm shadow-lg shadow-blue-900/30"
                 >
                   <Calendar size={15} /> Book Appointment
                 </a>
@@ -26,7 +59,7 @@ export default function Footer() {
                   href="https://wa.me/917982542536"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-green-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-700 transition-colors text-sm shadow-lg shadow-green-900/30"
                 >
                   <MessageCircle size={15} /> WhatsApp Us
                 </a>
@@ -38,28 +71,38 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Right — Image + Stats */}
-            <div className="hidden lg:flex items-end justify-end gap-4">
+            {/* Right — Woman image + Stats card */}
+            <div className="hidden lg:flex items-end justify-end relative">
+              {/* Woman image */}
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=350&h=400&fit=crop&crop=face"
+                  src="/girl-avatar.png"
                   alt="Happy patient smiling"
-                  className="w-64 h-72 object-cover rounded-2xl"
+                  className="w-72 h-80 object-cover object-top rounded-2xl"
                 />
+                {/* Subtle glow behind image */}
+                <div className="absolute -inset-4 bg-blue-500/10 rounded-3xl blur-2xl -z-10" />
               </div>
-              <div className="flex flex-col gap-3">
-                <div className="bg-white/10 backdrop-blur rounded-xl px-5 py-4 text-center">
-                  <p className="text-2xl font-bold text-white">5000+</p>
-                  <p className="text-slate-400 text-xs">Happy Patients</p>
+
+              {/* Floating stats card */}
+              <div className="absolute -right-2 top-4 bg-[#0d2259]/90 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-5 shadow-2xl shadow-blue-900/40 min-w-[160px]">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white text-sm">🦷</span>
+                  </div>
+                  <div>
+                    <p className="text-xl font-bold text-white leading-tight">5000+</p>
+                    <p className="text-slate-400 text-[11px]">Happy Patients</p>
+                  </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl px-5 py-4 text-center">
+                <div className="border-t border-blue-500/20 pt-3">
                   <p className="text-2xl font-bold text-white">4.9</p>
-                  <div className="flex justify-center gap-0.5 mt-1">
+                  <div className="flex gap-0.5 mt-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={12} className="text-yellow-400 fill-yellow-400" />
+                      <Star key={i} size={13} className="text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-slate-400 text-xs mt-1">Google Rating</p>
+                  <p className="text-slate-400 text-[11px] mt-1">Google Rating</p>
                 </div>
               </div>
             </div>
