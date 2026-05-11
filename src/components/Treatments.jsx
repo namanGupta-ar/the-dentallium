@@ -91,8 +91,8 @@ export default function Treatments() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Icon badge */}
-                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center border border-slate-100">
-                  <t.icon size={20} className="text-primary" />
+                <div className="absolute bottom-2 right-2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center border border-slate-100">
+                  <t.icon size={16} className="text-primary" />
                 </div>
               </div>
 

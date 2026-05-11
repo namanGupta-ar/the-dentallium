@@ -53,28 +53,28 @@ export default function ProblemToPerfect() {
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="flex flex-col lg:flex-row items-stretch justify-center gap-0 mb-14">
+        {/* Steps — horizontal scroll on mobile, row on desktop */}
+        <div className="flex overflow-x-auto lg:overflow-visible gap-0 mb-14 pb-4 lg:pb-0 snap-x snap-mandatory lg:justify-center scrollbar-hide">
           {steps.map((step, i) => (
-            <div key={step.num} className="flex items-center">
+            <div key={step.num} className="flex items-center shrink-0 snap-center">
               {/* Step card */}
-              <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center w-full lg:w-48 xl:w-52 flex flex-col items-center">
+              <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 lg:p-6 text-center w-40 sm:w-44 lg:w-48 xl:w-52 flex flex-col items-center">
                 {/* Icon */}
-                <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-3">
-                  <step.icon size={26} className="text-primary" />
+                <div className="w-11 h-11 lg:w-14 lg:h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-2 lg:mb-3">
+                  <step.icon size={22} className="text-primary" />
                 </div>
                 {/* Number */}
-                <p className="text-primary font-bold text-sm mb-1">{step.num}</p>
+                <p className="text-primary font-bold text-xs lg:text-sm mb-1">{step.num}</p>
                 {/* Title */}
-                <h3 className="font-bold text-dark text-sm mb-2">{step.title}</h3>
+                <h3 className="font-bold text-dark text-xs lg:text-sm mb-1 lg:mb-2">{step.title}</h3>
                 {/* Description */}
-                <p className="text-gray-500 text-xs leading-relaxed">{step.desc}</p>
+                <p className="text-gray-500 text-[11px] lg:text-xs leading-relaxed">{step.desc}</p>
               </div>
               {/* Arrow between steps */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:flex items-center justify-center w-8 shrink-0">
-                  <div className="w-7 h-7 bg-primary rounded-full flex items-center justify-center">
-                    <ArrowRight size={14} className="text-white" />
+                <div className="flex items-center justify-center w-6 lg:w-8 shrink-0">
+                  <div className="w-5 h-5 lg:w-7 lg:h-7 bg-primary rounded-full flex items-center justify-center">
+                    <ArrowRight size={12} className="text-white" />
                   </div>
                 </div>
               )}
