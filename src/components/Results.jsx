@@ -103,14 +103,6 @@ function CompareSlider({ before, after }) {
         <ChevronLeft size={14} className="text-white -mr-1" />
         <ChevronRight size={14} className="text-white -ml-1" />
       </div>
-
-      {/* Labels */}
-      <div className="absolute top-4 left-4 bg-slate-800/70 backdrop-blur text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-        Before
-      </div>
-      <div className="absolute top-4 right-4 bg-slate-800/70 backdrop-blur text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
-        After
-      </div>
     </div>
   );
 }
